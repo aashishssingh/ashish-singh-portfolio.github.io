@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Ashish Singh</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <span class="brand-mark">AS</span>
+        <span>Ashish Singh</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="about.html" data-page="about">About Me</a>
+        <a href="skills.html" data-page="skills">Skills</a>
+        <a href="projects.html" data-page="projects">Projects</a>
+        <a href="resume.html" data-page="resume">Resume</a>
+        <a href="contact.html" data-page="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-main" data-page="projects">
+      <section class="section page-section projects-section">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h1>Selected work and experiments.</h1>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Web App</span>
+              <a href="contact.html" aria-label="Ask about project one">Details</a>
+            </div>
+            <h3>Interactive Portfolio</h3>
+            <p>A responsive personal site built to present profile, skills, work, resume, and contact details across focused pages.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Dashboard</span>
+              <a href="contact.html" aria-label="Ask about project two">Details</a>
+            </div>
+            <h3>Analytics Interface</h3>
+            <p>A concept dashboard focused on readable metrics, fast scanning, and practical decision support.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Tool</span>
+              <a href="contact.html" aria-label="Ask about project three">Details</a>
+            </div>
+            <h3>Productivity Helper</h3>
+            <p>A lightweight tool idea for organizing tasks, tracking progress, and reducing friction in daily workflows.</p>
+          </article>
+        </div>
+        <div class="page-actions">
+          <a class="button primary" href="contact.html">Discuss a Project</a>
+          <a class="button secondary" href="resume.html">View Resume</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ashish Singh. Built with care.</p>
+      <a href="index.html">Home</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

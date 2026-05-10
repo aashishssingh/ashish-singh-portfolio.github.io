@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashish Singh | Portfolio</title>
+    <title>Skills | Ashish Singh</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,32 +30,40 @@
       </nav>
     </header>
 
-    <main data-page="home">
-      <section class="hero section">
-        <div class="hero-content">
-          <p class="eyebrow">Portfolio Website</p>
-          <h1>Hi, I'm Ashish Singh. I build thoughtful digital experiences.</h1>
-          <p class="hero-copy">
-            A developer focused on clear interfaces, reliable systems, and practical products
-            that feel good to use. Learn more about my background on LinkedIn.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="projects.html">View Projects</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/ashish-530singh" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-          </div>
+    <main class="page-main" data-page="skills">
+      <section class="section page-section skills-section">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h1>Tools and strengths I bring into projects.</h1>
         </div>
-        <div class="hero-visual" aria-label="Portfolio workspace preview">
-          <img
-            src="assets/ashish-graduation.jpeg"
-            alt="Ashish Singh standing outdoors in front of a university building"
-          />
+        <div class="skills-grid">
+          <article>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, responsive design, accessibility, component thinking</p>
+          </article>
+          <article>
+            <h3>Development</h3>
+            <p>Git, debugging, API integration, clean architecture, performance basics</p>
+          </article>
+          <article>
+            <h3>Design</h3>
+            <p>Layout, typography, visual hierarchy, prototyping, product polish</p>
+          </article>
+          <article>
+            <h3>Workflow</h3>
+            <p>Research, planning, iteration, documentation, collaboration, testing</p>
+          </article>
+        </div>
+        <div class="page-actions">
+          <a class="button primary" href="projects.html">View Projects</a>
+          <a class="button secondary" href="about.html">About Me</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>&copy; <span id="year"></span> Ashish Singh. Built with care.</p>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
     </footer>
 
     <script src="script.js"></script>
