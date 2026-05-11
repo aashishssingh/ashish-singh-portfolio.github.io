@@ -56,7 +56,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 18px;
   padding: 18px clamp(18px, 5vw, 64px);
   background: rgba(247, 244, 238, 0.92);
   border-bottom: 1px solid rgba(221, 215, 203, 0.85);
@@ -83,9 +83,9 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2.5vw, 28px);
+  gap: clamp(12px, 1.8vw, 24px);
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
@@ -281,7 +281,8 @@ h3 {
 
 .skills-grid,
 .projects-grid,
-.contact-grid {
+.contact-grid,
+.experience-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -289,7 +290,8 @@ h3 {
 
 .skills-grid article,
 .project-card,
-.contact-grid a {
+.contact-grid a,
+.experience-card {
   min-height: 180px;
   padding: 24px;
   border: 1px solid var(--line);
@@ -349,6 +351,30 @@ h3 {
 
 .project-topline a {
   color: var(--blue);
+}
+
+.experience-list {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 1000px;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.28fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.experience-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.experience-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
 }
 
 .resume-section {
@@ -490,6 +516,10 @@ h3 {
   .about-grid,
   .projects-grid,
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
     grid-template-columns: 1fr;
   }
 
