@@ -28,8 +28,10 @@ const setupSlideViewer = () => {
   const slideImage = document.querySelector("#presentation-slide");
   const currentSlide = document.querySelector("#current-slide");
   const totalSlides = document.querySelector("#total-slides");
+  const firstButton = document.querySelector("#first-slide");
   const prevButton = document.querySelector("#prev-slide");
   const nextButton = document.querySelector("#next-slide");
+  const lastButton = document.querySelector("#last-slide");
   const slideBase = slideStage.dataset.slideBase;
   const slideCount = Number(slideStage.dataset.slideCount);
   let activeSlide = 1;
@@ -41,9 +43,16 @@ const setupSlideViewer = () => {
     slideImage.src = `${slideBase}${slideNumber}.png`;
     slideImage.alt = `Civic Engagement Programming Survey slide ${activeSlide}`;
     currentSlide.textContent = String(activeSlide);
+    firstButton.disabled = activeSlide === 1;
     prevButton.disabled = activeSlide === 1;
     nextButton.disabled = activeSlide === slideCount;
+    lastButton.disabled = activeSlide === slideCount;
   };
+
+  firstButton.addEventListener("click", () => {
+    activeSlide = 1;
+    updateSlide();
+  });
 
   prevButton.addEventListener("click", () => {
     activeSlide = Math.max(1, activeSlide - 1);
@@ -52,6 +61,11 @@ const setupSlideViewer = () => {
 
   nextButton.addEventListener("click", () => {
     activeSlide = Math.min(slideCount, activeSlide + 1);
+    updateSlide();
+  });
+
+  lastButton.addEventListener("click", () => {
+    activeSlide = slideCount;
     updateSlide();
   });
 
