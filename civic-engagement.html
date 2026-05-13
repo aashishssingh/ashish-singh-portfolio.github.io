@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Civic Engagement Survey Analysis | Ashish Singh</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <span class="brand-mark">AS</span>
+        <span>Ashish Singh</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="about.html" data-page="about">About Me</a>
+        <a href="skills.html" data-page="skills">Skills</a>
+        <a href="projects.html" data-page="projects">Projects</a>
+        <a href="resume.html" data-page="resume">Resume</a>
+        <a href="contact.html" data-page="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-main" data-page="projects">
+      <section class="section page-section projects-section">
+        <div class="project-detail">
+          <div class="section-heading">
+            <p class="eyebrow">Project Details</p>
+            <h1>Civic Engagement Survey Analysis</h1>
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              I cleaned and validated survey response data with Python to improve the
+              reliability of analysis and reporting. Using pandas, NumPy, NLTK, and
+              matplotlib, I analyzed student responses, visualized trends, and interpreted
+              sentiment to identify factors that could improve engagement and behavior in
+              Civic courses.
+            </p>
+          </div>
+          <div class="artifact-grid" aria-label="Civic Engagement project files">
+            <article class="artifact-card">
+              <div>
+                <p class="eyebrow">Paper</p>
+                <h3>Final Report</h3>
+                <p>Research paper for the Civic Engagement Survey Analysis project.</p>
+              </div>
+              <a class="button primary" href="assets/civic-engagement/civic-engagement-final-report.docx" target="_blank" rel="noreferrer">Open Paper</a>
+            </article>
+            <article class="artifact-card">
+              <div>
+                <p class="eyebrow">Presentation</p>
+                <h3>Civic Engagement Programming Survey</h3>
+                <p>Slide presentation summarizing the project process, analysis, and findings.</p>
+              </div>
+              <a class="button primary" href="assets/civic-engagement/civic-engagement-programming-survey.pptx" target="_blank" rel="noreferrer">Open Presentation</a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button secondary" href="projects.html">Back to Projects</a>
+            <a class="button secondary" href="contact.html">Contact Me</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ashish Singh. Built with care.</p>
+      <a href="projects.html">Projects</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
