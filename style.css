@@ -228,6 +228,13 @@ h3 {
   box-shadow: 0 12px 26px rgba(23, 25, 28, 0.12);
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+  box-shadow: none;
+}
+
 .button.primary {
   background: var(--ink);
   color: var(--surface);
@@ -370,6 +377,10 @@ h3 {
   max-width: 920px;
 }
 
+.artifact-grid.single-artifact {
+  grid-template-columns: minmax(0, 460px);
+}
+
 .artifact-card {
   display: flex;
   flex-direction: column;
@@ -384,6 +395,50 @@ h3 {
 .artifact-card p {
   margin: 12px 0 24px;
   color: var(--muted);
+}
+
+.slide-viewer {
+  display: grid;
+  gap: 18px;
+  max-width: 980px;
+}
+
+.slide-viewer-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.slide-viewer-header h2 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+.slide-counter {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.slide-stage {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.slide-stage img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--surface);
+}
+
+.slide-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .resume-section {

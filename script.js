@@ -19,3 +19,43 @@ navLinks.forEach((link) => {
     navToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+const setupSlideViewer = () => {
+  const slideStage = document.querySelector(".slide-stage");
+
+  if (!slideStage) return;
+
+  const slideImage = document.querySelector("#presentation-slide");
+  const currentSlide = document.querySelector("#current-slide");
+  const totalSlides = document.querySelector("#total-slides");
+  const prevButton = document.querySelector("#prev-slide");
+  const nextButton = document.querySelector("#next-slide");
+  const slideBase = slideStage.dataset.slideBase;
+  const slideCount = Number(slideStage.dataset.slideCount);
+  let activeSlide = 1;
+
+  totalSlides.textContent = String(slideCount);
+
+  const updateSlide = () => {
+    const slideNumber = String(activeSlide).padStart(3, "0");
+    slideImage.src = `${slideBase}${slideNumber}.png`;
+    slideImage.alt = `Civic Engagement Programming Survey slide ${activeSlide}`;
+    currentSlide.textContent = String(activeSlide);
+    prevButton.disabled = activeSlide === 1;
+    nextButton.disabled = activeSlide === slideCount;
+  };
+
+  prevButton.addEventListener("click", () => {
+    activeSlide = Math.max(1, activeSlide - 1);
+    updateSlide();
+  });
+
+  nextButton.addEventListener("click", () => {
+    activeSlide = Math.min(slideCount, activeSlide + 1);
+    updateSlide();
+  });
+
+  updateSlide();
+};
+
+setupSlideViewer();

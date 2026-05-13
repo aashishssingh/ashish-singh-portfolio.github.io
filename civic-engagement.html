@@ -46,7 +46,7 @@
               Civic courses.
             </p>
           </div>
-          <div class="artifact-grid" aria-label="Civic Engagement project files">
+          <div class="artifact-grid single-artifact" aria-label="Civic Engagement project files">
             <article class="artifact-card">
               <div>
                 <p class="eyebrow">Paper</p>
@@ -55,15 +55,33 @@
               </div>
               <a class="button primary" href="assets/civic-engagement/civic-engagement-final-report.docx" target="_blank" rel="noreferrer">Open Paper</a>
             </article>
-            <article class="artifact-card">
+          </div>
+          <section class="slide-viewer" aria-label="Civic Engagement slide presentation">
+            <div class="slide-viewer-header">
               <div>
                 <p class="eyebrow">Presentation</p>
-                <h3>Civic Engagement Programming Survey</h3>
-                <p>Slide presentation summarizing the project process, analysis, and findings.</p>
+                <h2>Civic Engagement Programming Survey</h2>
               </div>
-              <a class="button primary" href="assets/civic-engagement/civic-engagement-programming-survey.pptx" target="_blank" rel="noreferrer">Open Presentation</a>
-            </article>
-          </div>
+              <p class="slide-counter" aria-live="polite">
+                Slide <span id="current-slide">1</span> of <span id="total-slides">34</span>
+              </p>
+            </div>
+            <div
+              class="slide-stage"
+              data-slide-base="assets/civic-engagement/slides/slides."
+              data-slide-count="34"
+            >
+              <img
+                id="presentation-slide"
+                src="assets/civic-engagement/slides/slides.001.png"
+                alt="Civic Engagement Programming Survey slide 1"
+              />
+            </div>
+            <div class="slide-controls">
+              <button class="button secondary" type="button" id="prev-slide">Previous</button>
+              <button class="button primary" type="button" id="next-slide">Next</button>
+            </div>
+          </section>
           <div class="page-actions">
             <a class="button secondary" href="projects.html">Back to Projects</a>
             <a class="button secondary" href="contact.html">Contact Me</a>
@@ -77,6 +95,6 @@
       <a href="projects.html">Projects</a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=civic-slideshow"></script>
   </body>
 </html>
