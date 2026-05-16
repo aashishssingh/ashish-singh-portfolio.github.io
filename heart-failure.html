@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Civic Engagement Survey Analysis | Ashish Singh</title>
+    <title>Predicting Heart Failure | Ashish Singh</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -35,48 +35,65 @@
         <div class="project-detail">
           <div class="section-heading">
             <p class="eyebrow">Project Details</p>
-            <h1>Civic Engagement Survey Analysis</h1>
+            <h1>Predicting Heart Failure</h1>
           </div>
           <div class="project-detail-copy">
             <p>
-              I cleaned and validated survey response data with Python to improve the
-              reliability of analysis and reporting. Using pandas, NumPy, NLTK, and
-              matplotlib, I analyzed student responses, visualized trends, and interpreted
-              sentiment to identify factors that could improve engagement and behavior in
-              Civic courses.
+              I evaluated whether machine learning can improve mortality prediction for
+              actuarial risk assessment using a 368-patient heart failure dataset with 60
+              clinical, demographic, and cardiovascular predictors. The analysis compared
+              Logistic Regression, SGD SVM, and Random Forest models against actuarial
+              concerns like risk segmentation, underwriting precision, model validation,
+              interpretability, and governance.
+            </p>
+            <p>
+              After cleaning the data, reducing multicollinearity with VIF, and narrowing
+              the model to seven key predictors, the Random Forest model produced the
+              strongest result with 98.2% accuracy and a 0.99 ROC AUC. The project frames
+              machine learning as a complement to traditional actuarial methods rather
+              than a replacement, with clear caution around small-sample reliability and
+              real-world model risk.
             </p>
           </div>
-          <div class="artifact-grid single-artifact" aria-label="Civic Engagement project files">
+          <div class="artifact-grid" aria-label="Heart Failure project files">
             <article class="artifact-card">
               <div>
                 <p class="eyebrow">Paper</p>
-                <h3>Final Report</h3>
-                <p>Research paper for the Civic Engagement Survey Analysis project.</p>
+                <h3>Actuarial Mortality Modeling Paper</h3>
+                <p>Research paper focused on machine learning, mortality prediction, and actuarial risk segmentation.</p>
               </div>
-              <a class="button primary" href="assets/civic-engagement/civic-engagement-final-report.docx" target="_blank" rel="noreferrer">Open Paper</a>
+              <a class="button primary" href="assets/heart-failure/heart-failure-actuarial-paper.pdf" target="_blank" rel="noreferrer">Open Paper</a>
+            </article>
+            <article class="artifact-card">
+              <div>
+                <p class="eyebrow">Deck</p>
+                <h3>Actuarial Team Meeting Presentation</h3>
+                <p>PowerPoint presentation summarizing the model comparison, results, limitations, and actuarial takeaways.</p>
+              </div>
+              <a class="button primary" href="assets/heart-failure/predicting-heart-failure.pptx" target="_blank" rel="noreferrer">Open Deck</a>
             </article>
           </div>
-          <section class="slide-viewer" aria-label="Civic Engagement slide presentation">
+          <section class="slide-viewer" aria-label="Predicting Heart Failure slide presentation">
             <div class="slide-viewer-header">
               <div>
                 <p class="eyebrow">Presentation</p>
-                <h2>Civic Engagement Programming Survey</h2>
+                <h2>Predicting Heart Failure</h2>
               </div>
               <p class="slide-counter" aria-live="polite">
-                Slide <span id="current-slide">1</span> of <span id="total-slides">34</span>
+                Slide <span id="current-slide">1</span> of <span id="total-slides">18</span>
               </p>
             </div>
             <div
               class="slide-stage"
-              data-slide-base="assets/civic-engagement/slides/slides."
-              data-slide-count="34"
-              data-slide-title="Civic Engagement Programming Survey"
-              data-slide-version="hires-20260516"
+              data-slide-base="assets/heart-failure/slides/slides."
+              data-slide-count="18"
+              data-slide-title="Predicting Heart Failure"
+              data-slide-version="heart-failure-20260516"
             >
               <img
                 id="presentation-slide"
-                src="assets/civic-engagement/slides/slides.001.png?v=hires-20260516"
-                alt="Civic Engagement Programming Survey slide 1"
+                src="assets/heart-failure/slides/slides.001.png?v=heart-failure-20260516"
+                alt="Predicting Heart Failure slide 1"
               />
             </div>
             <div class="slide-controls">
@@ -99,6 +116,6 @@
       <a href="projects.html">Projects</a>
     </footer>
 
-    <script src="script.js?v=civic-slideshow"></script>
+    <script src="script.js?v=heart-failure-slideshow"></script>
   </body>
 </html>

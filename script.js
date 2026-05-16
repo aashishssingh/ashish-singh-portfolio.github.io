@@ -35,6 +35,7 @@ const setupSlideViewer = () => {
   const slideBase = slideStage.dataset.slideBase;
   const slideCount = Number(slideStage.dataset.slideCount);
   const slideVersion = slideStage.dataset.slideVersion;
+  const slideTitle = slideStage.dataset.slideTitle || "Presentation";
   let activeSlide = 1;
 
   totalSlides.textContent = String(slideCount);
@@ -42,7 +43,7 @@ const setupSlideViewer = () => {
   const updateSlide = () => {
     const slideNumber = String(activeSlide).padStart(3, "0");
     slideImage.src = `${slideBase}${slideNumber}.png?v=${slideVersion}`;
-    slideImage.alt = `Civic Engagement Programming Survey slide ${activeSlide}`;
+    slideImage.alt = `${slideTitle} slide ${activeSlide}`;
     currentSlide.textContent = String(activeSlide);
     firstButton.disabled = activeSlide === 1;
     prevButton.disabled = activeSlide === 1;
