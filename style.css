@@ -441,6 +441,21 @@ h3 {
   gap: 12px;
 }
 
+.paper-viewer {
+  display: grid;
+  gap: 18px;
+  max-width: 1120px;
+}
+
+.paper-frame {
+  width: 100%;
+  min-height: min(78vh, 980px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
 .resume-section {
   background: var(--ink);
   color: var(--surface);
