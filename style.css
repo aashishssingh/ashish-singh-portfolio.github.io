@@ -654,6 +654,29 @@ h3 {
   background: var(--bg);
 }
 
+.education-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  max-width: 1120px;
+  margin-bottom: 34px;
+}
+
+.education-hero .section-heading {
+  margin-bottom: 0;
+}
+
+.education-spirit {
+  margin: 0;
+}
+
+.education-spirit img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
 .education-overview,
 .coursework-grid {
   display: grid;
@@ -833,9 +856,14 @@ h3 {
   .artifact-grid,
   .personality-grid,
   .photo-grid,
+  .education-hero,
   .education-overview,
   .coursework-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-spirit {
+    max-width: 360px;
   }
 
   .skills-grid {
@@ -865,6 +893,10 @@ h3 {
 
   h1 {
     font-size: 2.5rem;
+  }
+
+  .education-spirit {
+    max-width: 260px;
   }
 
   .skills-grid {
