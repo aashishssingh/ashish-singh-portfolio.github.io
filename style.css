@@ -715,6 +715,22 @@ h3 {
   color: var(--muted);
 }
 
+.course-list {
+  display: grid;
+  gap: 12px;
+  margin: -8px 0 0;
+  padding: 0 24px 24px 44px;
+  color: var(--muted);
+}
+
+.course-list li {
+  padding-left: 2px;
+}
+
+.course-list strong {
+  color: var(--ink);
+}
+
 .contact-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
