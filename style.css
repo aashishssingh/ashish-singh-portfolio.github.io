@@ -717,6 +717,12 @@ h3 {
   max-width: 1120px;
 }
 
+.coursework-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .degree-card,
 .course-card {
   border: 1px solid var(--line);
@@ -896,6 +902,26 @@ h3 {
 
   .education-spirit {
     max-width: 360px;
+  }
+
+  .coursework-column {
+    display: contents;
+  }
+
+  .course-card-probability {
+    order: 1;
+  }
+
+  .course-card-computing {
+    order: 2;
+  }
+
+  .course-card-experiments {
+    order: 3;
+  }
+
+  .course-card-ml {
+    order: 4;
   }
 
   .skills-grid {
