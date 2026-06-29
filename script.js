@@ -76,70 +76,61 @@ const setupSlideViewer = () => {
 
 setupSlideViewer();
 
+// Animate the coursework dropdowns. Each card's content is wrapped so its
+// height can be animated in CSS (grid-template-rows 0fr <-> 1fr). Opening
+// just sets [open] and lets CSS animate. Closing is intercepted so the
+// collapse transition runs first, then the card actually closes (otherwise
+// the native <details> hides its content instantly and the close snaps shut).
+// Cards are handled independently, so the two columns expand separately.
 const setupCourseAnimations = () => {
   const cards = document.querySelectorAll(".course-card");
-
-  if (!cards.length) return;
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   cards.forEach((card) => {
     const summary = card.querySelector("summary");
 
-    if (!summary) return;
+    // Skip if there is no summary or the content is already wrapped.
+    if (!summary || card.querySelector(".course-reveal")) return;
 
-    // Wrap everything after the summary so we can animate its height.
     const reveal = document.createElement("div");
     reveal.className = "course-reveal";
+
+    const inner = document.createElement("div");
+    inner.className = "course-reveal-inner";
+
     while (summary.nextSibling) {
-      reveal.appendChild(summary.nextSibling);
+      inner.appendChild(summary.nextSibling);
     }
+
+    reveal.appendChild(inner);
     card.appendChild(reveal);
 
     summary.addEventListener("click", (event) => {
-      event.preventDefault();
+      if (reduceMotion) return; // let the native toggle happen instantly
 
-      // Ignore clicks while a transition is mid-flight.
-      if (card.dataset.animating) return;
-
-      if (reduceMotion) {
-        card.open = !card.open;
+      // Ignore clicks while a close animation is already running.
+      if (card.classList.contains("is-collapsing")) {
+        event.preventDefault();
         return;
       }
 
-      card.dataset.animating = "true";
+      event.preventDefault();
 
       if (card.open) {
-        reveal.style.height = `${reveal.scrollHeight}px`;
-        reveal.offsetHeight; // force reflow so the next change animates
-        requestAnimationFrame(() => {
-          reveal.style.height = "0px";
-        });
+        // Animate closed, then remove [open] once the transition finishes.
+        card.classList.add("is-collapsing");
         reveal.addEventListener(
           "transitionend",
           () => {
             card.open = false;
-            reveal.style.height = "";
-            delete card.dataset.animating;
+            card.classList.remove("is-collapsing");
           },
           { once: true }
         );
       } else {
+        // Open immediately; CSS animates 0fr -> 1fr.
         card.open = true;
-        const target = reveal.scrollHeight;
-        reveal.style.height = "0px";
-        reveal.offsetHeight; // force reflow
-        requestAnimationFrame(() => {
-          reveal.style.height = `${target}px`;
-        });
-        reveal.addEventListener(
-          "transitionend",
-          () => {
-            reveal.style.height = "";
-            delete card.dataset.animating;
-          },
-          { once: true }
-        );
       }
     });
   });

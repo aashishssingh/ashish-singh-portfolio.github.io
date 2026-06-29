@@ -769,9 +769,24 @@ h3 {
 }
 
 .course-reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms ease;
+}
+
+.course-card[open] .course-reveal {
+  grid-template-rows: 1fr;
+}
+
+/* While closing, the card is still [open] (content visible) but collapses,
+   so the close transition can run before the content is removed. */
+.course-card[open].is-collapsing .course-reveal {
+  grid-template-rows: 0fr;
+}
+
+.course-reveal-inner {
   overflow: hidden;
-  transition: height 280ms ease;
-  will-change: height;
+  min-height: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
