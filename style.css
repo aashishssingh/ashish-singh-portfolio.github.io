@@ -757,10 +757,27 @@ h3 {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.08rem;
+  list-style-position: outside;
 }
 
 .course-card summary::marker {
   color: var(--accent);
+}
+
+.course-card summary::-webkit-details-marker {
+  color: var(--accent);
+}
+
+.course-reveal {
+  overflow: hidden;
+  transition: height 280ms ease;
+  will-change: height;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-reveal {
+    transition: none;
+  }
 }
 
 .course-card p {

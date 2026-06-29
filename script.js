@@ -75,3 +75,74 @@ const setupSlideViewer = () => {
 };
 
 setupSlideViewer();
+
+const setupCourseAnimations = () => {
+  const cards = document.querySelectorAll(".course-card");
+
+  if (!cards.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  cards.forEach((card) => {
+    const summary = card.querySelector("summary");
+
+    if (!summary) return;
+
+    // Wrap everything after the summary so we can animate its height.
+    const reveal = document.createElement("div");
+    reveal.className = "course-reveal";
+    while (summary.nextSibling) {
+      reveal.appendChild(summary.nextSibling);
+    }
+    card.appendChild(reveal);
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      // Ignore clicks while a transition is mid-flight.
+      if (card.dataset.animating) return;
+
+      if (reduceMotion) {
+        card.open = !card.open;
+        return;
+      }
+
+      card.dataset.animating = "true";
+
+      if (card.open) {
+        reveal.style.height = `${reveal.scrollHeight}px`;
+        reveal.offsetHeight; // force reflow so the next change animates
+        requestAnimationFrame(() => {
+          reveal.style.height = "0px";
+        });
+        reveal.addEventListener(
+          "transitionend",
+          () => {
+            card.open = false;
+            reveal.style.height = "";
+            delete card.dataset.animating;
+          },
+          { once: true }
+        );
+      } else {
+        card.open = true;
+        const target = reveal.scrollHeight;
+        reveal.style.height = "0px";
+        reveal.offsetHeight; // force reflow
+        requestAnimationFrame(() => {
+          reveal.style.height = `${target}px`;
+        });
+        reveal.addEventListener(
+          "transitionend",
+          () => {
+            reveal.style.height = "";
+            delete card.dataset.animating;
+          },
+          { once: true }
+        );
+      }
+    });
+  });
+};
+
+setupCourseAnimations();

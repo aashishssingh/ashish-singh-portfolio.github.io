@@ -73,7 +73,7 @@ a large fill behind body text. Primary buttons use `--ink`, not the accent.
 - **Buttons:** `--radius-sm`, Inter 600. `.primary` = `--ink` fill, paper text. `.secondary` / `.light` = transparent with `--ink` border. Hover lifts 2px. Keep a visible `:disabled` state for slide controls.
 - **Cards** (`personality-grid`, `skills-grid`, `project-card`, `degree-card`, `artifact-card`, `photo-card`): white surface, hairline border, `--radius`, generous padding. **No colored top border.** Title in Fraunces, meta/eyebrow in `--accent`, body in `--muted`. Hover: border darkens to `--ink`/accent and/or a 2–4px lift.
 - **Experience cards** (`resume-card`): white surface with a single `--accent` `border-left` (3px) for structure — same color on every card (no nth-child rotation).
-- **Coursework** (`course-card` = `<details>`): summary in Fraunces 600, `::marker` in `--accent`.
+- **Coursework** (`course-card` = `<details>`): summary in Fraunces 600, `::marker` in `--accent`. Open/close is height-animated via `script.js` (it wraps the content in `.course-reveal` and transitions its height; honors `prefers-reduced-motion`). Cards are intentionally **independent** — no shared `name` attribute — so the two columns expand separately.
 - **Slide viewer / paper frame:** bordered surface with `--shadow`; controls use the button system.
 - **Footer:** hairline top border, muted text, Inter. Copy line: `© <year> Ashish Singh` (no taglines).
 
