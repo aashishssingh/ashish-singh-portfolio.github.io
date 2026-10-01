@@ -87,3 +87,36 @@ a large fill behind body text. Primary buttons use `--ink`, not the accent.
 - Sentence case for headings and buttons; uppercase only for small eyebrow/label text.
 - Test new pages at ≤900px and ≤580px, where the responsive breakpoints collapse multi-column grids to one column.
 - **No em dashes (—) anywhere in site content or docs.** Use a comma, colon, semicolon, or parentheses instead, whichever reads most naturally.
+
+---
+
+## 6. SEO and sharing metadata
+
+Every page's `<head>` includes, in this order: `<title>`, `<meta name="description">`,
+`<link rel="canonical">`, Open Graph tags (`og:type`, `og:title`, `og:description`,
+`og:url`, `og:image`), Twitter Card tags (`twitter:card`, `twitter:title`,
+`twitter:description`, `twitter:image`), then `<link rel="stylesheet">`. Copy this
+block from an existing page for any new page and update the title, description, and
+canonical/og/twitter URLs; don't invent a different tag order or omit any of them.
+
+- **Base URL:** `https://aashishssingh.github.io/ashish-singh-portfolio.github.io/`.
+  All canonical and `og:url`/`twitter:*` values are absolute URLs built from this base.
+- **Description length:** one sentence, roughly 140 to 160 characters, written for a
+  recruiter skimming a search result, not for the page visitor.
+- **Shared OG/Twitter image:** `assets/og-image.jpg` (1200x630, built from the brand
+  tokens in section 2 and the graduation portrait). Reuse it site-wide rather than
+  generating a new image per page unless a page specifically warrants its own.
+- **Structured data (JSON-LD):** placed as a `<script type="application/ld+json">`
+  immediately before `</head>`.
+  - `index.html` carries the site's `Person` schema (name, url, image, jobTitle,
+    alumniOf, email, sameAs).
+  - `education.html` carries a `Person` with `hasCredential` entries for each degree.
+  - Project detail pages (`heart-failure.html`, `heart-failure-paper.html`,
+    `civic-engagement.html`, `civic-engagement-paper.html`) carry a `BreadcrumbList`
+    reflecting Projects → project → (paper).
+  - Don't duplicate the `Person` schema across every page; one canonical instance per
+    schema type is enough.
+- **Site-wide files:** `robots.txt`, `sitemap.xml`, and `llms.txt` live at the repo
+  root. Add any new page to `sitemap.xml` (with a `lastmod` you update when the page's
+  content meaningfully changes) and, if it's a page worth an AI assistant citing
+  directly, to `llms.txt`.

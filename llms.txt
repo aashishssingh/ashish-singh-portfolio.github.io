@@ -1,0 +1,20 @@
+# Ashish Singh
+
+> Portfolio of Ashish Singh, a UCLA Statistics and Data Science student (M.S. expected Dec 2026) pursuing roles in Data Science, AI Engineering, ML Engineering, and analytics.
+
+Ashish Singh is a data scientist in training who combines Python, R, SQL, and Tableau with statistical modeling to answer practical questions from complex data. He holds a B.S. in Statistics and Data Science from UCLA (2024) and is completing an M.S. in Applied Statistics and Data Science at UCLA (expected Dec 2026). His work spans product analytics, research data pipelines, BI dashboards, SQL reporting, remote-sensing analysis, and machine learning for actuarial and healthcare applications.
+
+## Pages
+
+- [Home](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/index.html): Overview and introduction.
+- [About](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/about.html): Background, interests, and DataFest mentoring.
+- [Skills](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/skills.html): Programming, machine learning, data engineering, and visualization skills.
+- [Projects](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/projects.html): ML/AI and data analytics project portfolio.
+- [Education](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/education.html): UCLA degrees and coursework.
+- [Experience](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/experience.html): Work history across analytics, AI/ML research, and operations.
+- [Contact](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/contact.html): Phone, email, LinkedIn, and GitHub.
+
+## Project details
+
+- [Predicting Heart Failure](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/heart-failure.html): Actuarial mortality modeling with Logistic Regression, SGD SVM, and Random Forest.
+- [Civic Engagement Survey Analysis](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/civic-engagement.html): Survey analytics with Python, pandas, NLTK, and sentiment analysis.

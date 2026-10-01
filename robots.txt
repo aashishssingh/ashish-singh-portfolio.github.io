@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aashishssingh.github.io/ashish-singh-portfolio.github.io/sitemap.xml
