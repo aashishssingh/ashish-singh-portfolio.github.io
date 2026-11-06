@@ -112,8 +112,12 @@ canonical/og/twitter URLs; don't invent a different tag order or omit any of the
     alumniOf, email, sameAs).
   - `education.html` carries a `Person` with `hasCredential` entries for each degree.
   - Project detail pages (`heart-failure.html`, `heart-failure-paper.html`,
-    `civic-engagement.html`, `civic-engagement-paper.html`) carry a `BreadcrumbList`
+    `civic-engagement.html`, `civic-engagement-paper.html`,
+    `kalshi-prediction-markets.html`) carry a `BreadcrumbList`
     reflecting Projects → project → (paper).
+  - Project assets live in `assets/<project-slug>/` (slide images named
+    `slides.001.png`, 16:9). Never publish raw course data on a project page; show the
+    analysis and presentation only.
   - Don't duplicate the `Person` schema across every page; one canonical instance per
     schema type is enough.
 - **Site-wide files:** `robots.txt`, `sitemap.xml`, and `llms.txt` live at the repo

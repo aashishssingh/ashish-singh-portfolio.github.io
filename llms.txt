@@ -17,4 +17,5 @@ Ashish Singh is a data scientist in training who combines Python, R, SQL, and Ta
 ## Project details
 
 - [Predicting Heart Failure](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/heart-failure.html): Actuarial mortality modeling with Logistic Regression, SGD SVM, and Random Forest.
+- [The 99-Cent Question: Kalshi Prediction Markets](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/kalshi-prediction-markets.html): STATS 414 team project testing whether Kalshi favorites priced at 90 to 99 cents win as often as their price implies, with random forest and XGBoost models.
 - [Civic Engagement Survey Analysis](https://aashishssingh.github.io/ashish-singh-portfolio.github.io/civic-engagement.html): Survey analytics with Python, pandas, NLTK, and sentiment analysis.

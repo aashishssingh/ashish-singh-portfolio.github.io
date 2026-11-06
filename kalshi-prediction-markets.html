@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The 99-Cent Question: Kalshi Prediction Markets | Ashish Singh</title>
+    <meta
+      name="description"
+      content="A STATS 414 team project testing whether Kalshi prediction-market favorites priced at 90 to 99 cents win as often as their price implies, using 7.17M hourly prices."
+    />
+    <link
+      rel="canonical"
+      href="https://aashishssingh.github.io/ashish-singh-portfolio.github.io/kalshi-prediction-markets.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The 99-Cent Question: Kalshi Prediction Markets | Ashish Singh" />
+    <meta
+      property="og:description"
+      content="A STATS 414 team project testing whether Kalshi prediction-market favorites priced at 90 to 99 cents win as often as their price implies."
+    />
+    <meta
+      property="og:url"
+      content="https://aashishssingh.github.io/ashish-singh-portfolio.github.io/kalshi-prediction-markets.html"
+    />
+    <meta
+      property="og:image"
+      content="https://aashishssingh.github.io/ashish-singh-portfolio.github.io/assets/og-image.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The 99-Cent Question: Kalshi Prediction Markets | Ashish Singh" />
+    <meta
+      name="twitter:description"
+      content="A STATS 414 team project testing whether Kalshi prediction-market favorites priced at 90 to 99 cents win as often as their price implies."
+    />
+    <meta
+      name="twitter:image"
+      content="https://aashishssingh.github.io/ashish-singh-portfolio.github.io/assets/og-image.jpg"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Projects",
+            "item": "https://aashishssingh.github.io/ashish-singh-portfolio.github.io/projects.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "The 99-Cent Question: Kalshi Prediction Markets",
+            "item": "https://aashishssingh.github.io/ashish-singh-portfolio.github.io/kalshi-prediction-markets.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <span class="brand-mark">AS</span>
+        <span>Ashish Singh</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="about.html" data-page="about">About Me</a>
+        <a href="skills.html" data-page="skills">Skills</a>
+        <a href="projects.html" data-page="projects">Projects</a>
+        <a href="education.html" data-page="education">Education</a>
+        <a href="experience.html" data-page="experience">Experience</a>
+        <a href="contact.html" data-page="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-main" data-page="projects">
+      <section class="section page-section projects-section">
+        <div class="project-detail">
+          <div class="section-heading">
+            <p class="eyebrow">Project Details</p>
+            <h1>The 99-Cent Question: Kalshi Prediction Markets</h1>
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              This STATS 414 midterm project, completed with Juan Cortes-Aguiar and
+              Ravikiran Madichetty, asked how accurate Kalshi's prices are. Kalshi lets
+              people trade yes/no contracts that pay $1 or $0, so a contract's price
+              works as the crowd's probability. We analyzed every hourly candle in the
+              course Kalshi database from Oct 8 to 27, 2026 (7.17 million rows across
+              839,613 markets) to see whether prices are calibrated and whether
+              favorites priced at 90 to 99 cents are as safe as they look.
+            </p>
+            <p>
+              The exploratory work showed that sports and crypto dominate the platform,
+              with sports at 76% of contracts traded and the top 1% of markets carrying
+              82% of volume. Prices were calibrated within half a point on average
+              across 129,866 markets, with a favorite and long-shot bias at the
+              extremes. Among 10,351 favorites (513 of which lost), Economics
+              contracts, mostly AAA gas-price markets, lost 0.5% of the time versus 3.5%
+              implied by price, a gap that held in every period.
+            </p>
+            <p>
+              We then split the favorites by date into train, validation, and test sets
+              and tuned elastic-net logistic regression, random forest, and XGBoost
+              models, each with and without volume, against the quoted price as a
+              baseline. No model beat the price: it had the best test Brier score
+              (0.04624), and volume added nothing. Buying every test favorite at the ask
+              still lost $19.61 on 2,299 contracts, even though 95.0% of them won,
+              before fees.
+            </p>
+            <p>
+              The raw Kalshi data is course material and is not published here, so this
+              page shows the analysis and the presentation only.
+            </p>
+          </div>
+          <section class="slide-viewer" aria-label="The 99-Cent Question slide presentation">
+            <div class="slide-viewer-header">
+              <div>
+                <p class="eyebrow">Presentation</p>
+                <h2>The 99-Cent Question</h2>
+              </div>
+              <p class="slide-counter" aria-live="polite">
+                Slide <span id="current-slide">1</span> of <span id="total-slides">13</span>
+              </p>
+            </div>
+            <div
+              class="slide-stage"
+              data-slide-base="assets/kalshi-prediction-markets/slides/slides."
+              data-slide-count="13"
+              data-slide-title="The 99-Cent Question"
+              data-slide-version="kalshi-20261106"
+            >
+              <img
+                id="presentation-slide"
+                src="assets/kalshi-prediction-markets/slides/slides.001.png?v=kalshi-20261106"
+                alt="The 99-Cent Question slide 1"
+              />
+            </div>
+            <div class="slide-controls">
+              <button class="button secondary" type="button" id="first-slide">Beginning</button>
+              <button class="button secondary" type="button" id="prev-slide">Previous</button>
+              <button class="button primary" type="button" id="next-slide">Next</button>
+              <button class="button secondary" type="button" id="last-slide">End</button>
+            </div>
+          </section>
+          <div class="page-actions">
+            <a class="button secondary" href="projects.html">Back to Projects</a>
+            <a class="button secondary" href="contact.html">Contact Me</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ashish Singh</p>
+      <a href="projects.html">Projects</a>
+    </footer>
+
+    <script src="script.js?v=kalshi-slideshow"></script>
+  </body>
+</html>
