@@ -639,6 +639,15 @@ h3 {
   margin-top: 8px;
 }
 
+.resume-role {
+  margin-top: 20px;
+}
+
+.resume-role + .resume-role {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
 .resume-actions {
   display: flex;
   flex: 0 0 auto;
