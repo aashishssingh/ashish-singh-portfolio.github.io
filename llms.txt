@@ -2,7 +2,7 @@
 
 > Portfolio of Ashish Singh, a UCLA Statistics and Data Science student (M.S. expected Dec 2026) pursuing roles in Data Science, AI Engineering, ML Engineering, and analytics.
 
-Ashish Singh is a data scientist in training who combines Python, R, SQL, and Tableau with statistical modeling to answer practical questions from complex data. He holds a B.S. in Statistics and Data Science from UCLA (2024) and is completing an M.S. in Applied Statistics and Data Science at UCLA (expected Dec 2026). His work spans product analytics, research data pipelines, BI dashboards, SQL reporting, remote-sensing analysis, and machine learning for actuarial and healthcare applications.
+Ashish Singh is a data scientist in training who combines Python, R, SQL, and Tableau with statistical modeling to answer practical questions from complex data. He holds a B.S. in Statistics and Data Science from UCLA (2024) and is completing an M.S. in Applied Statistics and Data Science at UCLA (expected Dec 2026). His work spans alumni data operations and reporting, LLM evaluation, remote-sensing analysis, and machine learning for actuarial, healthcare, and prediction-market applications.
 
 ## Pages
 
