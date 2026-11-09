@@ -114,10 +114,13 @@
                 <h3>AI/ML Intern, LLM Evaluation</h3>
                 <p>Jun 2026 - Aug 2026 | Los Angeles, California | Remote</p>
                 <ul>
-                  <li>Built a Python application that used large language models (OpenAI GPT) to classify free-text veterinary radiology reports across 52 diagnostic conditions in three datasets: canine thorax, feline thorax, and canine abdomen.</li>
-                  <li>Designed a per-condition prompting strategy with a shared rule set and JSON-configurable prompts, then evaluated model output against a hand-scored gold standard using confusion matrices (accuracy, sensitivity, specificity).</li>
-                  <li>Rebuilt the application with Claude Code as a modular, unit-tested package with concurrency and response caching, and documented how manual coding compared with AI-assisted development.</li>
-                  <li>Presented the methodology, results, and recommendations to the Vetology team, then shipped the codebase to GitHub with data confidentiality controls.</li>
+                  <li>Built a Python application that used large language models (OpenAI GPT-4o-mini, temperature 0) to classify free-text veterinary radiology reports across 52 diagnostic conditions in three datasets (canine thorax 21, feline thorax 21, canine abdomen 10), scoring each condition in its own call with nine shared rules and JSON-configurable prompts.</li>
+                  <li>Hand-scored 50 reports per dataset (150 total) to build a gold standard of 2,600 condition-level labels, and generated per-condition confusion matrices (accuracy, sensitivity, specificity) in Vetology's output template.</li>
+                  <li>Validated the pipeline with an offline keyword-heuristic baseline that scored 91%, 96%, and 88% accuracy on canine thorax, feline thorax, and canine abdomen, then showed those scores overstate performance: positives made up only 10%, 7%, and 4% of labels, so answering "normal" every time would score 90%, 93%, and 96%.</li>
+                  <li>Found that the legacy radiologist labels in the source files disagreed with the hand-scored gold standard in about 40% of canine thorax cells.</li>
+                  <li>Concluded that two limits drive the high scores: the gold standard came from a non-radiologist, and the data has few positive cases, so models can lean on negative predictions. Recommended a professional radiologist review of the gold standard and a fix for the class imbalance and negative bias before the next evaluation.</li>
+                  <li>Rebuilt the original 231-line script with Claude Code as a modular package with five unit tests, eight-worker concurrency, and a response cache, replaced a hard-coded API key with environment variables, and documented how manual coding compared with AI-assisted development.</li>
+                  <li>Shipped the codebase to GitHub with controls that keep Vetology data and credentials out of the repository, then presented the methodology, results, and recommendations to the Vetology team.</li>
                 </ul>
               </article>
               <article class="resume-card">
